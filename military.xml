@@ -115,9 +115,9 @@
       <field type="uint64_t" name="time_usec"     units="us"  >Timestamp (UNIX epoch, microseconds UTC).</field>
       <field type="uint32_t" name="target_set_id"             >Unique identifier of the target set.</field>
       <field type="char[50]" name="target_set_name"           >Human-readable name of the target set (null-terminated).</field>
-      <field type="int32_t"  name="lat[4]"        units="degE7">Corner latitudes, WGS84, clockwise order.</field>
-      <field type="int32_t"  name="lon[4]"        units="degE7">Corner longitudes, WGS84, clockwise order.</field>
-      <field type="float"    name="alt[4]"        units="m"   >Corner altitudes, MSL.</field>
+      <field type="int32_t[4]"  name="lat"        units="degE7">Corner latitudes, WGS84, clockwise order.</field>
+      <field type="int32_t[4]"  name="lon"        units="degE7">Corner longitudes, WGS84, clockwise order.</field>
+      <field type="float[4]"    name="alt"        units="m"   >Corner altitudes, MSL.</field>
       <field type="uint64_t" name="time_start"    units="us"  >Area validity start time (UNIX epoch, microseconds UTC). 0 = immediate.</field>
       <field type="uint64_t" name="time_end"      units="us"  >Area validity end time (UNIX epoch, microseconds UTC). 0 = indefinite.</field>
     </message>
@@ -258,7 +258,7 @@
       <field type="float"    name="offset_x"      units="m"    >Mounting offset X from vehicle reference point in coordinate_frame.</field>
       <field type="float"    name="offset_y"      units="m"    >Mounting offset Y from vehicle reference point in coordinate_frame.</field>
       <field type="float"    name="offset_z"      units="m"    >Mounting offset Z from vehicle reference point in coordinate_frame.</field>
-      <field type="float"    name="q[4]"                       >RWS orientation quaternion [w, x, y, z] relative to coordinate_frame.</field>
+      <field type="float[4]"    name="q"                       >RWS orientation quaternion [w, x, y, z] relative to coordinate_frame.</field>
       <field type="float"    name="accuracy_roll" units="rad"  >Roll orientation accuracy (1-sigma).</field>
       <field type="float"    name="accuracy_pitch" units="rad" >Pitch orientation accuracy (1-sigma).</field>
       <field type="float"    name="accuracy_yaw"  units="rad"  >Yaw orientation accuracy (1-sigma).</field>
