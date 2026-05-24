@@ -2,7 +2,7 @@
 <mavlink>
   <dialect>0</dialect>
   <version>1</version>
-  <include>common.xml</include>
+  <include>all.xml</include>
 
   <enums>
 
